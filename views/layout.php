@@ -30,26 +30,28 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Poster</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.php">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Page Header-->
-    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('assets/img/<?= $backgroundImage ?>')">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
                         <h1><?= $title ?></h1>
-                        <span class="subheading">Pour tout les Geeks !!</span>
+                        <span class="subheading"><?= $subheading ?></span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Main Content-->
-    <?= $content ?>
+    <main>
+        <!-- Main Content-->
+        <?= $content ?>
+    </main>
     <!-- Footer-->
     <footer class="border-top">
         <div class="container px-4 px-lg-5">
