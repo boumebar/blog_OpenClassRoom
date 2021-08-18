@@ -13,14 +13,7 @@ ob_start();
         <div class="col-md-10 col-lg-8 col-xl-7">
             <p>Envoyez-nous un message, nous vous repondrons dès que possible. A bientot !!!!</p>
             <div class="my-5">
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form>
                     <div class="form-floating">
                         <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                         <label for="name">Nom</label>

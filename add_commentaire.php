@@ -2,9 +2,11 @@
 
 session_start();
 
-require('models/Commentaires.php');
+require('models/CommentaireManager.php');
 
-addCommentaires();
+$commentaireManager = new CommentaireManager();
+
+$commentaireManager->addCommentaires();
 
 // Redirection du visiteur vers la page de l'article
-header("Location: commentaires.php?id=" . $_POST['id_billets'] . "");
+header("Location: article.php?id=" . $_POST['id_billets'] . "");

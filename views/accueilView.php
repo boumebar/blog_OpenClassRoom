@@ -3,23 +3,9 @@
 $backgroundImage = 'home-bg.jpg';
 $title = 'Blog high-tech';
 $subheading = 'Pour tout les Geeks !!';
+
+
 ?>
-
-<!-- <form action="add_article.php" method="post">
-    <p>
-        <label for="auteur">Auteur</label> : <input type="text" name="auteur" id="auteur" /><br />
-        <label for="titre">Titre</label> : <input type="text" name="titre" id="titre" /><br />
-        <label for="contenu">Message</label> : <textarea cols="20" rows="7" type="text" name="contenu" id="contenu"></textarea></br>
-
-        <input type="submit" value="Envoyer" />
-    </p>
-</form>
-<div>
-    <h2>Derniers aticles du blog :</h2>
-</div>-->
-
-
-
 
 
 <?php ob_start() ?>
@@ -32,10 +18,10 @@ $subheading = 'Pour tout les Geeks !!';
                 <div class="post-preview">
                     <a href="article.php?id=<?= $article['id'] ?>">
                         <h2 class="post-title"><?= htmlspecialchars($article['titre']) ?></h2>
-                        <h3 class="post-subtitle"><?= htmlspecialchars($article['contenu']) ?></h3>
+                        <h3 class="post-subtitle"><?= reduireChaineMot(htmlspecialchars($article['contenu']), 10) ?>...</h3>
                     </a>
                     <p class="post-meta">
-                        Posté par<?= htmlspecialchars($article['auteur']) ?>
+                        Posté par <?= htmlspecialchars($article['auteur']) ?>
                         le <?= $article['date_creation'] ?>
                     </p>
                 </div>
