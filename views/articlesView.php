@@ -1,14 +1,11 @@
 <?php
 
+
 $backgroundImage = 'home-bg.jpg';
 $title = 'Blog high-tech';
 $subheading = 'Pour tout les Geeks !!';
 
-
-?>
-
-
-<?php ob_start() ?>
+ob_start() ?>
 
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -16,7 +13,7 @@ $subheading = 'Pour tout les Geeks !!';
             <?php foreach ($articles as $article) { ?>
                 <!-- Post preview-->
                 <div class="post-preview">
-                    <a href="article.php?id=<?= $article['id'] ?>">
+                    <a href="index.php?action=article&amp;id=<?= $article['id'] ?>">
                         <h2 class="post-title"><?= htmlspecialchars($article['titre']) ?></h2>
                         <h3 class="post-subtitle"><?= reduireChaineMot(htmlspecialchars($article['contenu']), 10) ?>...</h3>
                     </a>
@@ -35,4 +32,5 @@ $subheading = 'Pour tout les Geeks !!';
 </div>
 <?php $content = ob_get_clean() ?>
 
-<?php require('layout.php') ?>
+<?php
+require('views/layout.php') ?>

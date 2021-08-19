@@ -49,7 +49,7 @@ ob_start();
             </div>
         <?php } ?>
 
-        <form class="form-block" action="add_commentaire.php" method="post">
+        <form class="form-block" action="index.php?action=addCommentaire" method="post">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">

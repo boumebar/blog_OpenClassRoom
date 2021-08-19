@@ -45,16 +45,16 @@ class CommentaireManager extends Manager
     }
 
 
-    public function addCommentaires()
+    public function addCommentaire($id_billets, $auteur, $commentaire)
     {
         $bdd = $this->connect();
 
         // Insertion du message à l'aide d'une requête préparée
         $req = $bdd->prepare('INSERT INTO commentaires (id_billets, auteur,commentaire,date_commentaire) VALUES(:id_billets,:auteur,:commentaire,NOW())');
         $req->execute([
-            'id_billets' => htmlspecialchars($_POST['id_billets']),
-            'auteur' => htmlspecialchars($_POST['auteur']),
-            'commentaire' => htmlspecialchars($_POST['commentaire']),
+            'id_billets' => $id_billets,
+            'auteur' => $auteur,
+            'commentaire' => $commentaire,
         ]);
     }
 }

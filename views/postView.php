@@ -13,14 +13,7 @@ ob_start();
         <div class="col-md-10 col-lg-8 col-xl-7">
             <p>A vos plumes !!!!</p>
             <div class="my-5">
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form action="add_article.php" method="POST">
+                <form action="index.php?action=addArticle" method="POST">
                     <div class="form-floating">
                         <input class="form-control" id="auteur" name="auteur" type="text" data-sb-validations="required" />
                         <label for="name">Nom</label>

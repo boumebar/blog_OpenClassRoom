@@ -32,16 +32,16 @@ class ArticleManager extends Manager
     }
 
 
-    public function addArticles()
+    public function addArticle($titre, $auteur, $contenu)
     {
         $bdd = $this->connect();
 
         // Insertion du message à l'aide d'une requête préparée
         $req = $bdd->prepare('INSERT INTO billets (titre, auteur,contenu,date_creation) VALUES(:titre,:auteur,:contenu,NOW())');
         $req->execute([
-            'titre' => htmlspecialchars($_POST['titre']),
-            'auteur' => htmlspecialchars($_POST['auteur']),
-            'contenu' => htmlspecialchars($_POST['contenu']),
+            'titre' => $titre,
+            'auteur' => $auteur,
+            'contenu' => $contenu,
         ]);
     }
 }
